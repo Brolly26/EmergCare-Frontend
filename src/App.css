@@ -68,3 +68,6 @@ body{
   }
   
 }
+#root > footer > div > div > div:nth-child(3) > ul > li:nth-child(2) > div{
+  z-index: 99999;
+}

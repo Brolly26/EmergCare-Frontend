@@ -1,8 +1,8 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
-import hero from './../assets/hero-img01.png'
-import hero2 from './../assets/hero-img02.png'
-import hero3 from './../assets/hero-img03.png'
+import hero from './../assets/Gravidas/gravida1.jpg'
+import hero2 from './../assets/kids/children1.png'
+import hero3 from './../assets/kids/children.png'
 import icon from './../assets/icon01.png'
 import icon2 from './../assets/icon02.png'
 import icon3 from './../assets/icon03.png'
@@ -11,9 +11,9 @@ import videoIcon from './../assets/video-icon.png'
 import avatarIcon from './../assets/avatar-icon.png'
 import About from '../components/About/About'
 import ServiceList from '../components/Services/ServiceList'
-import featureImg from './../assets/feature-img.png'
+import featureImg from './../assets/pediatric.jpg'
 import DoctorList from '../components/Doctors/DoctorList'
-import faqIcon from './../assets/faq-img.png'
+import faqIcon from './../assets/kids/children3.jpeg'
 import FaqList from '../components/Faq/FaqList'
 import Testimonial from '../components/Testimonial/Testimonial'
 const Home = () => {
@@ -31,14 +31,16 @@ const Home = () => {
 
               <h1 className='text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] 
                 md:leading-[70px]'>
-                Nosso compromisso é promover uma vida longa e saudável.
+                Promovendo uma Vida Longa e Saudável para Grávidas e Crianças.
+
+
               </h1>
 
-              <p className='text_para'> No tranquilo amanhecer da cidade antiga, a brisa suave acariciava as ruas estreitas.
-                Os sinos da igreja ecoavam, marcando o novo dia. Vendedores montavam suas barracas, oferecendo frutas frescas.
+              <p className='text_para'> Durante a gravidez e a infância, saúde e bem-estar são essenciais para mães e filhos. Promover uma vida saudável envolve alimentação equilibrada, acompanhamento pré-natal, exercícios e apoio emocional.
               </p>
-
-              <button className='btn'> Solicitar Agendamento</button>
+              <Link to='/doctor' className='w-[44px] h-[44px] rounded-full border border-solid'>
+              <button className='btn' > Solicitar Agendamento</button>
+              </Link>
             </div>
             <div className=' columnn-info mt-[30px] lg:mt[70px] flex flex-col lg:flex-row lg:items-start gap-5 lg:gap-[30px]'>
 
@@ -68,11 +70,11 @@ const Home = () => {
 
           <div className='flex gap-[30px] justify-end'>
             <div>
-              <img className='w-full' src={hero} />
+              <img className='w-full rounded-2xl' style={{height:'95%'}} src={hero} />
             </div>
-            <div>
-              <img className='w-full mb-[30px]' src={hero2} />
-              <img className='w-full mb-[30px]' src={hero3} />
+            <div style={{width:'284px'}}>
+              <img className='w-full mb-[20px] rounded-2xl' style={{height:'240px'}} src={hero2} />
+              <img className='w-full mb-[30px] rounded-2xl' style={{height:'262px'}} src={hero3} />
             </div>
           </div>
         </div>
@@ -115,17 +117,17 @@ const Home = () => {
             <div className='mt-[30px]'>
 
               <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>
-                Encontre um especialista
+                Encontre Clínicas
               </h2>
 
               <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>
-                Assistência de classe mundial para todos. Nosso sistema de saúde oferece cuidados de saúde especializados e incomparáveis.
+              Encontre clínicas próximas com serviços especializados para grávidas e crianças. Nossa rede oferece tecnologia de ponta e altamente qualificados para garantir o melhor atendimento.
               </p>
-              <Link to='/doctor' className='w-[44px] h-[44px] rounded-full border border-solid 
+<Link to='/doctor' className='w-[44px] h-[44px] rounded-full border border-solid 
                                 border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor'>
                 <BsArrowRight className="group-hover:text-white w-6 h-5" />
               </Link>
-            </div>   
+            </div>
           </div>
 
           <div className='py-[30px] px-5 '>
@@ -133,11 +135,10 @@ const Home = () => {
             <div className='mt-[30px]'>
 
               <h2 className='text-[26px] leading-9 text-headingColor font-[700] text-center'>
-                Encontre um especialista
+                Marque uma Consulta Online
               </h2>
-
               <p className='text-[16px] leading-7 text-textColor font-[400] mt-4 text-center'>
-                Assistência de classe mundial para todos. Nosso sistema de saúde oferece cuidados de saúde especializados e incomparáveis.
+                Agende suas consultas facilmente com nossa ferramenta online. Veja horários disponíveis e marque sua consulta de forma rápida e conveniente.
               </p>
               <Link to='/doctor' className='w-[44px] h-[44px] rounded-full border border-solid 
                                 border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor'>
@@ -158,7 +159,7 @@ const Home = () => {
         <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'> Nosso serviços médicos </h2>
           <p className='text_para text-center'>
-            Cuidados de classe mundial para todos. Nosso sistema de saúde oferece cuidados especializados sem igual.
+            Temos o sistema de saúde reconhecido por seus cuidados especializados
           </p>
         </div>
         <ServiceList />
@@ -174,9 +175,12 @@ const Home = () => {
 
           {/*  Recurso Content or Feature content */}
           <div className='xl:w-[670px]'>
-            <h2 className='heading'>
-              Obtenha tratamento virtual <br /> a qualquer momento.
+            <h2 className='heading' style={{ marginBottom: '24px', fontSize: '40px' }}>
+              Tratamento Virtual para Mães e Crianças
+              <br />
             </h2>
+            <span className='heading' style={{}}>  A qualquer momento.       </span>
+
             <ul className='pl-4'>
               <li className='text_para'>
                 1.  Agende a consulta diretamente.
@@ -193,8 +197,8 @@ const Home = () => {
           </div>
           {/* -------------------- Recurso Imagem  or  feature img -------------------- */}
           <div className='relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0'>
-            <img src={featureImg} className='w-3/4' alt='' />
-            <div className='w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 
+            <img src={featureImg} className='w-3/4' style={{width:'550px', height:'550px'}} alt='' />
+            <div className='w-[150px] lg:w-[248px] border-solid border-2 border-gray-300  bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 
                 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px]'>
 
               <div className='flex items-center justify-between'>
@@ -245,13 +249,14 @@ const Home = () => {
     <section className='section-margins' >
       <div className='container section-margins'>
         <div className='flex justify-between gap-[50px] lg:gap-0'>
-         <div className='w-1/2 hidden md:block'>
-          <img src={faqIcon} alt='' />
-         </div>
-            <div className='w-full md:w-1/2'>
-              <h2 className='heading'>Most questions by our beloved patients</h2>
-              <FaqList />
-            </div>
+          <div className='w-1/2 hidden md:block'>
+            <img src={faqIcon} className='rounded' style={{width:'670px', height:'660px'}} alt='' />
+          </div>
+          <div className='w-full md:w-1/2'>
+            <h2 className='heading'>Perguntas Frequentes dos Nossos Queridos Pacientes
+            </h2>
+            <FaqList />
+          </div>
         </div>
       </div>
     </section>
@@ -260,14 +265,14 @@ const Home = () => {
     {/* ------------------------------ testimonial  ----------------------------- */}
     <section className='section-margins'>
       <div className='container'>
-    <div className='xl:w-[470px] mx-auto'>
+        <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'> Oque nossos pacientes estão dizendo</h2>
-             <p className='text_para text-center'>
-              Cuidados de classe mundial para todos. Nosso sistema de saúde oferece cuidados especializados sem igual.
-             </p>
-           </div>
-         <Testimonial  />
+          <p className='text_para text-center'>
+            Cuidados de classe mundial para todos. Nosso sistema de saúde oferece cuidados especializados sem igual.
+          </p>
         </div>
+        <Testimonial />
+      </div>
     </section>
     {/* ------------------------------  testimonial end ----------------------------- */}
 
